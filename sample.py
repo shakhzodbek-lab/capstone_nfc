@@ -4,7 +4,7 @@ import nfc
 # Initialize the NFC reader
 clf = nfc.ContactlessFrontend('usb')
 
-# Initialize the face detection model (you might need to adjust the path)
+# Initialize the face detection model
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Function to capture and detect faces
@@ -31,7 +31,7 @@ def detect_face():
 def on_connect(tag):
     print("NFC Card Detected:", tag)
     detect_face()
-    # Send data to the server here (you'll need to implement the server connection)
+    # Send data to the server here 
 
 # Start the NFC event loop
 try:
